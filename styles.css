@@ -1,0 +1,247 @@
+:root {
+  --ink: #070a11;
+  --muted: #53657d;
+  --line: #d8e2ef;
+  --paper: #f8fbff;
+  --surface: #ffffff;
+  --blue: #2563eb;
+  --teal: #0f9f8f;
+  --rose: #e11d48;
+  --amber: #f59e0b;
+  --green: #16a34a;
+  --shadow: 0 18px 50px rgba(43, 47, 54, 0.11);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: white;
+  background:
+    linear-gradient(135deg, rgba(37, 99, 235, 0.08), transparent 34%),
+    linear-gradient(315deg, rgba(15, 159, 143, 0.08), transparent 30%),
+    var(--paper);
+  font-family: Inter, ui-sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 22px;
+  font-size: clamp(2.6rem, 7vw, 5.8rem);
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+h2 {
+  margin-bottom: 14px;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  line-height: 1.05;
+  letter-spacing: 0;
+}
+
+h3 {
+  margin-bottom: 10px;
+  font-size: 1.15rem;
+  line-height: 1.25;
+}
+
+#home {
+  background-image: url(./assets/background.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: 84px;
+  border-bottom: 1px solid rgba(216, 226, 239, 0.9);
+  backdrop-filter: blur(4px);
+}
+
+.topbar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  clip-path: polygon(0 0, 50% 0, 25% 100%, 0 100%);
+  z-index: -1;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.7rem;
+  font-weight: 800;
+  white-space: nowrap;
+  text-decoration: none;
+  margin-left: 48px;
+}
+
+.brand-icon {
+  height: 44px;
+  width: auto;
+}
+
+.topnav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-right: 24px;
+  justify-content: flex-end;
+  align-self: stretch;
+}
+
+.topnav a {
+  min-height: 30px;
+  text-decoration: none;
+  align-self: center;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.topnav a:hover,
+.topnav a:focus-visible {
+  color: var(--blue);
+  outline: 0;
+}
+
+.ticket-btn {
+  background-color: black;
+  color: white;
+  padding: 20px 6px;
+  border-radius: 8px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.hero {
+  align-items: center;
+  height: calc(100vh - 72px);
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 720px;
+  height: 100%;
+  margin-left: auto;
+  margin-right: 33%;
+  padding: 16px 0px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.primary-action,
+.secondary-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.primary-action {
+  color: #ffffff;
+  background: var(--blue);
+  box-shadow: 0 12px 28px rgba(37, 99, 235, 0.24);
+}
+
+.secondary-action {
+  color: #ffffff;
+  background: #049417;
+  border: 1px solid var(--line);
+}
+
+.versus {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background-color: #2b313f;
+  padding: 12px 36px;
+  padding-top: 20px;
+  min-height: 150px;
+}
+
+.player {
+  display:flex;
+  flex-direction: column;
+}
+
+.circle-cut {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+@media (max-width: 680px) {
+  .topbar {
+    align-items: flex-start;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .topnav {
+    justify-content: flex-start;
+  }
+
+  .section {
+    scroll-margin-top: 150px;
+  }
+
+  .hero {
+    min-height: auto;
+  }
+
+  /* disable the outward shift on small screens so layout doesn't break */
+  .ticket-btn {
+    right: 0;
+  }
+
+  /* mobile: remove trapezoid and keep brand inline so it doesn't overflow */
+  .brand {
+    clip-path: none;
+    border-radius: 8px;
+    height: auto;
+    min-width: auto;
+    padding: 8px 12px;
+  }
+}
