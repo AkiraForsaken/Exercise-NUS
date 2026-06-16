@@ -1,60 +1,81 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>G Vs S</title>
-  <link rel="stylesheet" href="./styles.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GVS</title>
+    <link rel="stylesheet" href="./styles.css">
 </head>
 
 <body>
+    <header class="topbar">
+        <div class="brand">
+            <img src="assets/icon.jpeg" alt="icon" class="brand-icon">
+            <p class="logo-text">GVS</p>
+        </div>
+        <nav class="topnav">
+            <a href="#home">HOME</a>
+            <a href="#about">ABOUT</a>
+            <a href="#game">GAME</a>
+            <a href="#react">REACTIONS</a>
+            <a href="#contact">CONTACT</a>
+            <a href="#ticket" class="ticket-btn">BUY TICKET</a>
+        </nav>
+    </header>
+
     <main>
-        <section id="home" class="">
-            <header class="topbar">
-                <a href="#home" class="brand">
-                    <img src="./assets/icon.jpeg" alt="icon" class="brand-icon">
-                    <span>GVS</span>
-                </a>
-                <nav class="topnav">
-                    <a href="#home">HOME</a>
-                    <a href="#about">ABOUT</a>
-                    <a href="#game">GAME</a>
-                    <a href="#react">REACTIONS</a>
-                    <a href="#contact">CONTACT</a>
-                    <a href="#ticket" class="ticket-btn">BUY TICKET</a>
-                </nav>
-            </header>
+        <section id="home">
             <div class="hero">
                 <div class="hero-text">
-                    <h1> 
-                        <span>Satoru Gojo</span> vs <span>Ryomen Sukuna</span> 
-                    </h1>
-                    <p class="lead"> 
-                        The strongest sorcerer of today, 
-                        versus the strongest sorcerer in history.
-                        Who will win? 
-                    </p>
-                    <div class="hero-actions"> 
-                        <a href="game" class="primary-action">Watch Match</a>
-                        <a href="ticket" class="secondary-action">Get Ticket</a>
+                    <h1 class="punch-line">SATORU GOJO VS RYOMEN SUKUNA</h1>
+                    <p class="subline">The strongest sorcerer of today versus the strongest sorcerer in history.</p>
+                    <div class="hero-actions">
+                        <a href="#game" class="primary-action">Watch match</a>
+                        <a href="#ticket" class="secondary-action">Get ticket</a>
                     </div>
                 </div>
             </div>
         </section>
+    </main>
+
+    <footer>
         <div class="versus">
             <div class="player">
-                <img src="./assets/maki.jpeg" alt="" class="circle-cut">
-                <p>Maki Zen'in</p>
+                <img src="assets/maki.jpeg" alt="" class="circle-cut">
+                <span class="team-name">Maki</span>
             </div>
-            <p> vs </p>
+            <span class="vs">VS</span>
             <div class="player">
-                <img src="./assets/naoya.jpeg" alt="" class="circle-cut">
-                <p>Naoya Zen'in</p>
+                <img src="assets/naoya.jpeg" alt="" class="circle-cut">
+                <span class="team-name">Naoya</span>
             </div>
+
+            <div class="match-info">
+                <h3 class="match-name">SORCERER SHOWDOWN</h3>
+                <span class="match-category">Championship</span>
+            </div>
+            <div class="match-date">
+                <div class="match-time">
+                    <span class="time">171</span>
+                    <span class="category">Days</span>
+                </div>
+                <div class="match-time">
+                    <span class="time">11</span>
+                    <span class="category">Hours</span>
+                </div>
+                <div class="match-time">
+                    <span class="time">10</span>
+                    <span class="category">Minutes</span>
+                </div>
+                <div class="match-time">
+                    <span class="time">39</span>
+                    <span class="category">Seconds</span>
+                </div>
+            </div>
+            <button type="button" class="ticket-btn">Buy Tickets</button>
+
         </div>
-    </main>
+        
+    </footer>
 </body>
-
-
 </html>
